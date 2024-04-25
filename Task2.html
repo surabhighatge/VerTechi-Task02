@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Jewellery</title>
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      overflow: hidden; /* Ensure images don't overflow */
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      border: none;
+      z-index: 2; /* Ensure buttons are above images */
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #c69252;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #ffe4c4;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333; /* Dark text */
+    }
+
+    header {
+      background-color: #c69252; /* Golden brown */
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    nav ul {
+      text-align: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #f5f5f5;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #333; /* Dark text */
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    #features {
+      background-color: #ffe4c4;
+      padding: 50px 0;
+    }
+
+    #features h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .feature img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color:  #c69252; /* Golden brown */
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    button {
+      background-color: #ffe4c4;
+      color: #333; /* Dark text */
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e6e6e6;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo"><b>Just Jewellery</b></div>
+  <div class="container0">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Collection</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="00.jpg" style="width:80%">
+        
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="111.jpg" style="width:80%">
+        
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="114.jpg" style="width:80%">
+       
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="101.jpg" style="width:80%">
+        
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <h1>Welcome to Just Jewellery</h1>
+    <p>Discover elegance and style with our exquisite jewelry collection. From classic to contemporary, we offer a range of jewelry pieces crafted with precision and passion.</p>
+    <button class="button">Collection</button>
+  </section>
+</main>
+<section id="features">
+  <h2>Collection</h2>
+  <div class="feature">
+    <img src="91.jpg" alt="pic">
+    <img src="92.jpg" alt="pic">
+    <img src="93.jpg" alt="pic">
+    <img src="94.jpg" alt="pic">
+    <img src="95.jpg" alt="pic">
+    <img src="96.jpg" alt="pic">
+    <img src="97.jpg" alt="pic">
+    <img src="98.jpg" alt="pic">
+    <img src="99.jpg" alt="pic">
+    <img src="100.jpg" alt="pic">
+  </div>
+</section>
+<section class="Aboutus">
+  <div class="container01">
+    <h2 style="font-size: medium;">About Us</h2>
+    <p><h6>Just Jewellery is your destination for elegant and timeless jewelry pieces. With a focus on quality craftsmanship and curated designs, we aim to bring beauty and sophistication to every moment. Discover your perfect accessory with us today.</h6></p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <button>Start Ordering Now</button>
+    <p>Sign up for updates</p>
+  </div>
+</footer>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+</body>
+</html>
